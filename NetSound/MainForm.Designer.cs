@@ -31,11 +31,13 @@
             this.ipAddressTextBox = new System.Windows.Forms.TextBox();
             this.startTalkButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.localIPcomboBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ipAddressTextBox
             // 
-            this.ipAddressTextBox.Location = new System.Drawing.Point(124, 38);
+            this.ipAddressTextBox.Location = new System.Drawing.Point(125, 72);
             this.ipAddressTextBox.Name = "ipAddressTextBox";
             this.ipAddressTextBox.Size = new System.Drawing.Size(180, 20);
             this.ipAddressTextBox.TabIndex = 0;
@@ -53,17 +55,36 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(56, 41);
+            this.label1.Location = new System.Drawing.Point(59, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 13);
+            this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "IP:";
+            this.label1.Text = "Remote IP:";
+            // 
+            // localIPcomboBox
+            // 
+            this.localIPcomboBox.FormattingEnabled = true;
+            this.localIPcomboBox.Location = new System.Drawing.Point(126, 25);
+            this.localIPcomboBox.Name = "localIPcomboBox";
+            this.localIPcomboBox.Size = new System.Drawing.Size(179, 21);
+            this.localIPcomboBox.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(70, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Local IP:";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(441, 200);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.localIPcomboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.startTalkButton);
             this.Controls.Add(this.ipAddressTextBox);
@@ -80,6 +101,8 @@
         private System.Windows.Forms.TextBox ipAddressTextBox;
         private System.Windows.Forms.Button startTalkButton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox localIPcomboBox;
+        private System.Windows.Forms.Label label2;
     }
 }
 

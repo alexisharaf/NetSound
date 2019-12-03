@@ -67,6 +67,15 @@ namespace NetSound
             listeningSocket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
             connected = true;
 
+            IPHostEntry localIpHost = Dns.GetHostEntry(Dns.GetHostName());
+            //ipAddr = ipHost.AddressList[0];
+
+            for (int i = 0; i < localIpHost.AddressList.Length; i++)
+            {
+               localIPcomboBox.Items.Add(localIpHost.AddressList[i].ToString());
+
+
+            }
 
 
         }
@@ -92,7 +101,8 @@ namespace NetSound
         private void Listening()
         {
             //Прослушиваем по адресу
-            IPEndPoint localIP = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 5555);
+//            IPEndPoint localIP = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 5555);
+            IPEndPoint localIP = new IPEndPoint(IPAddress.Parse(localIPcomboBox.Text), 5555);
             listeningSocket.Bind(localIP);
             //начинаем воспроизводить входящий звук
             audiooutput.Play();
